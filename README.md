@@ -19,7 +19,9 @@ Download MySQL server from following link:
 Download MySQL shell from following link:
 </pre>
 (https://dev.mysql.com/downloads/shell/)
+Complete single installation for windows <br>
 
+(https://dev.mysql.com/downloads/installer/)
 - Setup the path for mysql if not already set by executable installer.
 
 ### To Start server:
