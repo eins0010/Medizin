@@ -12,9 +12,13 @@ The idea behind this is to give a better perspective of medical application.
 
 Initial Setup:
 <pre>
-Download MySQL server from following link: https://dev.mysql.com/downloads/mysql/
-Download MySQL shell from following link: https://dev.mysql.com/downloads/shell/
+Download MySQL server from following link: 
 </pre>
+(https://dev.mysql.com/downloads/mysql/)
+<pre>
+Download MySQL shell from following link:
+</pre>
+(https://dev.mysql.com/downloads/shell/)
 
 - Setup the path for mysql if not already set by executable installer.
 
