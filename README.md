@@ -11,16 +11,11 @@ The idea behind this is to give a better perspective of medical application.
 (https://daringfireball.net/projects/markdown/syntax#overview)
 
 Initial Setup:
-<pre>
-Download MySQL server from following link: 
-</pre>
+<pre>Download MySQL server from following link: </pre>
 (https://dev.mysql.com/downloads/mysql/)
-<pre>
-Download MySQL shell from following link:
-</pre>
+<pre>Download MySQL shell from following link:</pre>
 (https://dev.mysql.com/downloads/shell/)
-Complete single installation for windows <br>
-
+<pre>Complete single installation for windows </pre>
 (https://dev.mysql.com/downloads/installer/)
 - Setup the path for mysql if not already set by executable installer.
 
