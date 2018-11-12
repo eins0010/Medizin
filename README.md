@@ -40,6 +40,9 @@ If user is root with passowrd is 123 trying to connect to database hive on IP 12
 - use MEDIZIN;
 - CREATE TABLE test (name VARCHAR(20), role VARCHAR(20));
 - insert into test values ("ravi", "admin");
+- create table UserCredentials (userid VARCHAR(20), username VARCHAR(20), e_password VARCHAR(20));
+- insert into UserCredentials values ("101", "ravi", "qwert");
+- insert into UserCredentials values ("102", "eins", "poiut");
 
 ### Tutorials for working with python connectors
 https://dev.mysql.com/doc/connector-python/en/connector-python-examples.html
