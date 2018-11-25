@@ -25,9 +25,10 @@ def query_execution(func):
         if DATABASE == "MSSQL":
             con = pyodbc.connect('Trusted_Connection=yes', **mssql_db)
             cursor = con.cursor()
-            query = args[0] or kwargs["query"]
+            query = kwargs.get("query") or args[0]
             cursor.execute(query)
-            return [row for row in cursor]
+            kwargs["result"] = [row for row in cursor]
+            return func(*args, **kwargs)
         elif DATABASE == "MYSQL":
             connection = mysql.connector.connect(**mysql_db)
             cursor = connection.cursor()
