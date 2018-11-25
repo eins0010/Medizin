@@ -8,9 +8,9 @@ class DB_MYSQL_config(object):
 
 
 class DB_MSSQL_config(object):
-    UID = "sa",
-    PWD = "enter",
-    DRIVER = "{ODBC Driver 13 for SQL Server}",
+    UID = "sa"
+    PWD = "enter"
+    DRIVER = "{ODBC Driver 13 for SQL Server}"
     SERVER = "localhost"
     DATABASE = "MediZine"
 
