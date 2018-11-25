@@ -1,9 +1,9 @@
 from medizin import api
 from flask_restplus import Resource
-from medizin.MYSQL.user_credentials import get_data_from_user_credentials, autheticate_user
+from medizin.Database.tables_queries import get_data_from_user_credentials, autheticate_user
 from medizin.utils.encryption import Encryption
 from medizin.utils.common_utils import authenticate
-from medizin.utils.encryption import RSAEncryption
+
 
 ns = api.namespace('Login', description='Introduction to medicine app')
 
