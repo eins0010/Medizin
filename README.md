@@ -1,12 +1,16 @@
 # Medizin
-Hello,
-
-Welcome to the World Of Programming.
-
 
 Medicine management system
 
+Hello, This project concentrates on problems faced by small scale pharmacy. 
 The idea behind this is to give a better perspective of medical application.
+Objective is to provide a world class software to deliver following usercases: 
+- their daily medicine intake, export and stock
+- Money transactions
+- Notifications about medicines going to expire
+- Taking all Actors together to deliver a complete package to user.
+
+
 <br>Link for markdown language documentation:
 (https://daringfireball.net/projects/markdown/syntax#overview)
 
@@ -19,9 +23,16 @@ Initial Setup:
 (https://dev.mysql.com/downloads/installer/)
 - Setup the path for mysql if not already set by executable installer.
 
-### To Start server:
+- Install Gradle
+(https://gradle.org/install/) 
+
+### To Start MYSQL server:
 Mac Users: Go to system Preferences -> MySQL -> start server <br>
-Windows Users: Please check under right bottom menu
+Windows Users: Please check under right bottom menu or anything similar for windows
+
+### To Start this Medizin application
+Go to Medizin directory from either terminal or cmd and type the following 
+<pre> gradle run </pre> 
 
 ### To login to mysql shell
 <pre>mysql -u USERNAME -pPASSWORD -h HOSTNAMEORIP DATABASENAME </pre> 
@@ -45,4 +56,7 @@ If user is root with passowrd is 123 trying to connect to database hive on IP 12
 - insert into UserCredentials values ("102", "eins", "poiut");
 
 ### Tutorials for working with python connectors
-https://dev.mysql.com/doc/connector-python/en/connector-python-examples.html
+- https://dev.mysql.com/doc/connector-python/en/connector-python-examples.html
+
+### Tutorial for AES Encryption
+- https://www.youtube.com/watch?v=AQDCe585Lnc

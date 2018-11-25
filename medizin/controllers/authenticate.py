@@ -1,8 +1,9 @@
-from medizin import api, app
+from medizin import api
 from flask_restplus import Resource
 from medizin.MYSQL.user_credentials import get_data_from_user_credentials, autheticate_user
-from medizin.encryption import Encryption
+from medizin.utils.encryption import Encryption
 from medizin.utils.common_utils import authenticate
+from medizin.utils.encryption import RSAEncryption
 
 ns = api.namespace('Login', description='Introduction to medicine app')
 
@@ -12,7 +13,7 @@ class LoginClass(Resource):
     def post(self, username, password):
         result = autheticate_user(username, password)
         if result:
-            user_auth_token = Encryption.auth_token(username, password)
+            user_auth_token = Encryption.generate_RSA_token(username, password)
             return {"user": username,
                     "auth_token": user_auth_token
                     }

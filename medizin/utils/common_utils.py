@@ -1,6 +1,6 @@
 from flask import request
 from functools import wraps
-from medizin.encryption import Encryption
+from medizin.utils.encryption import Encryption
 
 
 def authenticate(func):

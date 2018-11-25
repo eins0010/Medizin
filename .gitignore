@@ -105,3 +105,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Gradle builds
+build
+.gradle
+gradlew.bat
