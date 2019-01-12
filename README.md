@@ -60,3 +60,37 @@ If user is root with passowrd is 123 trying to connect to database hive on IP 12
 
 ### Tutorial for AES Encryption
 - https://www.youtube.com/watch?v=AQDCe585Lnc
+
+### Project structure
+<pre>
+      ├── README.md -> Holds the top level documentation.
+      ├── config.py -> All project level configuration goes here.
+      ├── requirements.txt -> All the packages required to run this application smoothly.
+      ├── run.py -> To run this application.
+      └── Medizin
+          ├── serializers -> Holds all the transformers
+          ├── clients -> Any external service we are trying to use in this project
+          ├── controllers -> All the rest end points are exposed here.
+          ├── models -> All Project level data models goes here
+          ├── utils -> project level utilities folder
+          └── tests -> test the configured routes
+</pre>
+
+### DATABASE
+This Database folder holds files which have different meaning.
+
+-> Connections: File holding connections to different databases (MSSQL and MYSQL)
+-> database_tables: All the table protos for this project. Some insertion data if required.
+-> table objects: This is a directory under which Each Database table should be represented as a class entity in this file. 
+Along with the attributes this class should contain methods to perform operations specific to that table.
+
+### CONTROLLERS
+This folder mainly concentrates on different kind of routes we can provide under a namespace for better good of this application.
+
+### SERIALIZERS
+This folder holds all the serializers or transformers for marshalling and unmarshalling. Either it can be getting data from web to 
+convert into our proto or converting our system defined proto to API readable format.
+The files in this folder follows the following convention: controller_name + model (authenticate_model)
+
+### TESTS
+This folder holds the test cases for all the routes in the application, testing it with different kind of inputs.

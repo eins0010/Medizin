@@ -2,8 +2,8 @@ from flask import request
 from functools import wraps
 from medizin.utils.encryption import Encryption
 from config import DATABASE
-from medizin.Database.connections import mssql_db, mysql_db
-import pyodbc
+from medizin.database.connections import mssql_db, mysql_db
+# import pyodbc
 import mysql.connector
 
 
@@ -23,12 +23,13 @@ def query_execution(func):
     @wraps(func)
     def database_query_execution(*args, **kwargs):
         if DATABASE == "MSSQL":
-            con = pyodbc.connect('Trusted_Connection=yes', **mssql_db)
-            cursor = con.cursor()
-            query = kwargs.get("query") or args[0]
-            cursor.execute(query)
-            kwargs["result"] = [row for row in cursor]
-            return func(*args, **kwargs)
+            # con = pyodbc.connect('Trusted_Connection=yes', **mssql_db)
+            # cursor = con.cursor()
+            # query = kwargs.get("query") or args[0]
+            # cursor.execute(query)
+            # kwargs["result"] = [row for row in cursor]
+            # return func(*args, **kwargs)
+            pass
         elif DATABASE == "MYSQL":
             connection = mysql.connector.connect(**mysql_db)
             cursor = connection.cursor()
